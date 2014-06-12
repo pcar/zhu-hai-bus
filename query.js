@@ -13,7 +13,7 @@ var busQuery = (function () {
                 result = data.Result,
                 foretellDetailList = [],
                 empty = result.lineEmpty;
-            if (empty) return callback(false, empty.text());
+            if (empty) return callback(false, false);
             meat.queryLineName = result.queryLineName.text();
             meat.queryStationName = result.queryStationName.text();
             result.foretellDetail.each(function (i, w) {
